@@ -1,0 +1,13 @@
+name: ball-dispenser
+description: Dispense the next random uncalled ball from the 1-75 pool.
+input_schema:
+  type: object
+  properties:
+    room_id:
+      type: string
+      description: Unique 4-character room code.
+    current_called_count:
+      type: integer
+      description: Number of balls already drawn in the round.
+  required:
+    - room_id

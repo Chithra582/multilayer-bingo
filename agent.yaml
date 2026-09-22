@@ -1,0 +1,62 @@
+spec_version: "0.1.0"
+name: "multiplayer-bingo-agent"
+version: "1.0.0"
+description: >
+  Autonomous AI Game Master and referee agent for real-time multiplayer Bingo.
+  Manages WebSocket room lifecycles, executes provably fair ball draws, verifies
+  winning patterns across 5x5 card matrices, and delivers live game commentary.
+author: "Chithra R"
+license: "MIT"
+
+model:
+  preferred: "gemini-2.0-flash"
+  fallback:
+    - "gpt-4o"
+    - "claude-3-5-sonnet"
+  constraints:
+    temperature: 0.2
+    max_tokens: 4096
+
+skills:
+  - bingo-ball-caller
+  - winning-pattern-verifier
+  - room-state-coordinator
+  - game-commentary-engine
+
+tools:
+  - ball-dispenser
+  - pattern-checker
+  - room-coordinator
+  - commentary-generator
+
+runtime:
+  max_turns: 10
+  temperature: 0.2
+  timeout: 120
+
+compliance:
+  risk_tier: standard
+  frameworks:
+    - gdpr
+  data_governance:
+    pii_handling: redact
+    data_classification: internal
+  recordkeeping:
+    audit_logging: true
+    log_format: structured_json
+  supervision:
+    human_in_the_loop: conditional
+    override_capability: true
+    kill_switch: true
+
+tags:
+  - multiplayer-bingo
+  - websocket
+  - game-master
+  - real-time
+  - pattern-verification
+  - gaming
+
+metadata:
+  domain: "developer-tools"
+  category: "Developer tools"

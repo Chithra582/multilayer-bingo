@@ -1,0 +1,15 @@
+name: commentary-generator
+description: Synthesize live host commentary and calculate near-win proximity.
+input_schema:
+  type: object
+  properties:
+    event_type:
+      type: string
+      enum: [ball_drawn, near_win, bingo_claimed, round_reset]
+      description: Type of game event triggering commentary.
+    event_payload:
+      type: object
+      description: Contextual data such as ball info or winner details.
+  required:
+    - event_type
+    - event_payload

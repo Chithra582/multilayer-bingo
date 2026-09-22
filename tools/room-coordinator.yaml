@@ -1,0 +1,16 @@
+name: room-coordinator
+description: Update room settings, toggle auto-call timer, or adjust speed.
+input_schema:
+  type: object
+  properties:
+    room_id:
+      type: string
+      description: Unique 4-character room code.
+    auto_call:
+      type: boolean
+      description: Whether the server automatically draws balls on timer.
+    call_speed:
+      type: number
+      description: Interval between draws in seconds.
+  required:
+    - room_id

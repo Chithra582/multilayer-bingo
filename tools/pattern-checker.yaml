@@ -1,0 +1,25 @@
+name: pattern-checker
+description: Verify if a card matrix satisfies a specific winning pattern using called balls.
+input_schema:
+  type: object
+  properties:
+    pattern:
+      type: string
+      enum: [line, four_corners, postcard, stamp, x_pattern, blackout]
+      description: Target winning pattern rule.
+    card_matrix:
+      type: array
+      items:
+        type: array
+        items:
+          type: integer
+      description: 5x5 grid of card numbers.
+    called_numbers:
+      type: array
+      items:
+        type: integer
+      description: List of numbers called by the server.
+  required:
+    - pattern
+    - card_matrix
+    - called_numbers
