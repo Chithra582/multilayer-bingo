@@ -1,0 +1,6 @@
+{
+  "name": "Multiplayer Bingo",
+  "description": "Interactive real-time multiplayer Bingo game for two or more players with live ball calling, room codes, chat reactions, and automated win verification.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
